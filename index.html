@@ -13,6 +13,7 @@
 					<button id="prevMonth">◄ Prev</button>
 					<h2 id="currentMonthYear">Month Year</h2>
 					<button id="nextMonth">Next ►</button>
+					<button id="syncWithGoogle">Sync with Google</button>
 				</div>
 			</header>
 			<main>
@@ -68,5 +69,17 @@
 			</main>
 		</div>
 		<script src="renderer.js"></script>
+		<script
+			async
+			defer
+			src="https://apis.google.com/js/api.js"
+			onload="gapiLoaded()"
+		></script>
+		<script
+			async
+			defer
+			src="https://accounts.google.com/gsi/client"
+			onload="gisLoaded()"
+		></script>
 	</body>
 </html>

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const reminderTimeInput = document.getElementById('reminderTime');
     const saveReminderBtn = document.getElementById('saveReminder');
     const goalTypeInput = document.getElementById('goalTypeInput');
+    const syncWithGoogleBtn = document.getElementById('syncWithGoogle');
 
     let currentDate = new Date(2025, 5, 1); // Start in June 2025
     let allGoals = [];
@@ -222,6 +223,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             currentDate.setMonth(currentDate.getMonth() + 1);
             loadAndRenderCalendar();
         }
+    });
+
+    syncWithGoogleBtn.addEventListener('click', async () => {
+        await window.electronAPI.googleAuth();
     });
 
     // Initial load

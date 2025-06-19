@@ -2,11 +2,118 @@ const { app, BrowserWindow, ipcMain, Notification } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const schedule = require('node-schedule');
+const { google } = require('googleapis');
 
 let mainWindow;
 let goalsData = [];
 const goalsFilePath = path.join(__dirname, 'goals.json'); // Or 'data/goals.json'
 let scheduledReminders = {}; // To keep track of scheduled jobs
+
+// Google Calendar API setup
+const CREDENTIALS_PATH = path.join(__dirname, 'credentials.json');
+const TOKEN_PATH = path.join(__dirname, 'token.json');
+const SCOPES = ['https://www.googleapis.com/auth/calendar.events'];
+
+let auth;
+
+async function loadGoogleCredentials() {
+    try {
+        const credentials = JSON.parse(fs.readFileSync(CREDENTIALS_PATH));
+        const { client_secret, client_id, redirect_uris } = credentials.web;
+        auth = new google.auth.OAuth2(client_id, client_secret, redirect_uris[0]);
+
+        // Check if we have previously stored a token.
+        if (fs.existsSync(TOKEN_PATH)) {
+            const token = fs.readFileSync(TOKEN_PATH);
+            auth.setCredentials(JSON.parse(token));
+        }
+    } catch (error) {
+        console.error('Error loading client secret file:', error);
+        return;
+    }
+}
+
+async function getAccessToken(auth, code) {
+    return new Promise((resolve, reject) => {
+        auth.getToken(code, (err, token) => {
+            if (err) return reject('Error retrieving access token', err);
+            auth.setCredentials(token);
+            // Store the token to disk for later program executions
+            fs.writeFileSync(TOKEN_PATH, JSON.stringify(token));
+            console.log('Token stored to', TOKEN_PATH);
+            resolve(auth);
+        });
+    });
+}
+
+ipcMain.handle('google-auth', async () => {
+    const authUrl = auth.generateAuthUrl({
+        access_type: 'offline',
+        scope: SCOPES,
+    });
+
+    let authWindow = new BrowserWindow({
+        width: 800,
+        height: 600,
+        webPreferences: {
+            nodeIntegration: false,
+            contextIsolation: true
+        }
+    });
+
+    authWindow.loadURL(authUrl);
+
+    const handleRedirect = async (url) => {
+        const url_parts = new URL(url);
+        const code = url_parts.searchParams.get('code');
+        if (code) {
+            await getAccessToken(auth, code);
+            authWindow.close();
+            syncGoalsToGoogleCalendar();
+        }
+    };
+
+    authWindow.webContents.on('will-redirect', (event, url) => {
+        handleRedirect(url);
+    });
+
+    authWindow.webContents.on('did-navigate', (event, url) => {
+        handleRedirect(url);
+    });
+});
+
+async function syncGoalsToGoogleCalendar() {
+    if (!auth || !auth.credentials.access_token) {
+        console.log('User is not authenticated.');
+        return;
+    }
+
+    const calendar = google.calendar({ version: 'v3', auth });
+    for (const goal of goalsData) {
+        const event = {
+            summary: goal.title,
+            description: goal.details,
+            start: {
+                date: goal.date,
+                timeZone: 'UTC',
+            },
+            end: {
+                date: goal.date,
+                timeZone: 'UTC',
+            },
+        };
+
+        try {
+            await calendar.events.insert({
+                calendarId: 'primary',
+                resource: event,
+            });
+            console.log(`Event created for ${goal.date}`);
+        } catch (error) {
+            console.error(`Error creating event for ${goal.date}:`, error);
+        }
+    }
+}
 
 function createWindow() {
     mainWindow = new BrowserWindow({
@@ -95,6 +202,7 @@ function saveGoals() {
 
 app.whenReady().then(() => {
     loadGoals();
+    loadGoogleCredentials();
     createWindow();
     scheduleDailyReminders(); // Schedule reminders on startup
 
