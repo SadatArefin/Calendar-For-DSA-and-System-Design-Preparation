@@ -8,7 +8,8 @@ A beautiful cross-platform desktop calendar app for tracking your DSA (Data Stru
 
 - **Interactive Calendar UI**: View your goals in a monthly calendar grid with color-coded DSA and System Design days.
 - **Goal Details Modal**: Click any day to view, edit, or add custom goals and notes.
-- **Reminders & Notifications**: Set daily reminders for each goal. Get native desktop notifications at your chosen time.
+- **Native Desktop Notifications**: Set daily reminders for each goal and receive native desktop notifications at your chosen time that integrate with your operating system's notification center.
+- **In-App Notifications**: Receive visual notification alerts within the app even when focused on the application.
 - **Custom Goal Support**: Add your own custom reminders and notes for any date.
 - **Theme Customization**: Switch between dark and light modes, with 7 beautiful color themes to choose from.
 - **Persistent Storage**: All goals and reminders are saved locally in `goals.json`.
@@ -28,6 +29,7 @@ A beautiful cross-platform desktop calendar app for tracking your DSA (Data Stru
 - **Cloud Backup & Multi-device Sync**
 - **Goal Templates & Suggestions**
 - **Motivational Quotes/Widgets**
+- **Enhanced Notification Actions** (snooze, dismiss, mark as complete)
 
 ---
 
@@ -71,6 +73,27 @@ To change themes:
 - Use the toggle switch in the header to switch between dark and light modes
 - Click on any color circle to change the primary color theme
 - Your theme preferences are automatically saved between sessions
+
+### Notification System
+
+The application features a comprehensive notification system to help you stay on track with your goals:
+
+#### Native Desktop Notifications
+- Receive operating-system native notifications at your scheduled reminder times
+- Click on notifications to focus the application window
+- Notifications work even when the app is minimized or in the background
+- Compatible with notification centers on Windows, macOS, and Linux
+
+#### In-App Notifications
+- Visual notifications within the app when a reminder is triggered
+- Provides context about the reminder directly in the application interface
+- Automatically fades after a few seconds or can be manually dismissed
+
+To set up a reminder:
+1. Click on any day in the calendar
+2. Toggle "Set Reminder" in the modal
+3. Choose your preferred time for the notification
+4. Save the reminder
 
 ---
 
@@ -147,9 +170,9 @@ npm run package
 
 ## File Structure
 
-- `main.js` — Electron main process, handles window, reminders, and IPC.
-- `renderer.js` — Frontend logic for calendar UI and modals.
-- `preload.js` — Secure bridge between renderer and main process.
+- `main.js` — Electron main process, handles window, reminders, and native desktop notifications.
+- `renderer.js` — Frontend logic for calendar UI, modals, and in-app notification display.
+- `preload.js` — Secure bridge between renderer and main process for communication.
 - `goals.json` — Local storage for all goals and reminders.
 - `credentials.json` — (Optional) Google API credentials for calendar sync.
 - `token.json` — (Generated) Stores the Google API access token after successful authorization.
@@ -179,9 +202,10 @@ Sadat Arefin Rafat
 
 ## Acknowledgements
 - [Electron](https://www.electronjs.org/)
-- [node-schedule](https://www.npmjs.com/package/node-schedule)
-- [electron-builder](https://www.electron.build/)
-- [googleapis](https://www.npmjs.com/package/googleapis)
+- [node-schedule](https://www.npmjs.com/package/node-schedule) - For scheduling reminders
+- [electron-builder](https://www.electron.build/) - For packaging the application
+- [googleapis](https://www.npmjs.com/package/googleapis) - For Google Calendar integration
+- [Electron Notification API](https://www.electronjs.org/docs/latest/api/notification) - For native desktop notifications
 
 ---
 
