@@ -9,28 +9,37 @@
 	<body>
 		<div class="app-container">
 			<header>
+				<div class="top-controls">
+					<button id="syncWithGoogle">Sync with Google</button>
+					<div class="theme-controls">
+						<div class="theme-switcher-container">
+							<label for="theme-switcher" class="switcher-label">
+								<input type="checkbox" id="theme-switcher" />
+								<span class="switcher-slider"></span>
+							</label>
+						</div>
+						<div class="color-palette">
+							<div class="color-box" data-color="default"></div>
+							<div class="color-box" data-color="red"></div>
+							<div class="color-box" data-color="green"></div>
+							<div class="color-box" data-color="purple"></div>
+							<div class="color-box" data-color="orange"></div>
+							<div class="color-box" data-color="teal"></div>
+							<div class="color-box" data-color="pink"></div>
+						</div>
+					</div>
+				</div>
 				<div class="navigation">
 					<button id="prevMonth">◄ Prev</button>
-					<h2 id="currentMonthYear">Month Year</h2>
+					<div class="date-selector">
+						<input
+							type="month"
+							id="monthYearPicker"
+							aria-label="Select month and year"
+						/>
+						<h2 id="currentMonthYear">Month Year</h2>
+					</div>
 					<button id="nextMonth">Next ►</button>
-					<button id="syncWithGoogle">Sync with Google</button>
-				</div>
-				<div class="theme-controls">
-					<div class="theme-switcher-container">
-						<label for="theme-switcher" class="switcher-label">
-							<input type="checkbox" id="theme-switcher" />
-							<span class="switcher-slider"></span>
-						</label>
-					</div>
-					<div class="color-palette">
-						<div class="color-box" data-color="default"></div>
-						<div class="color-box" data-color="red"></div>
-						<div class="color-box" data-color="green"></div>
-						<div class="color-box" data-color="purple"></div>
-						<div class="color-box" data-color="orange"></div>
-						<div class="color-box" data-color="teal"></div>
-						<div class="color-box" data-color="pink"></div>
-					</div>
 				</div>
 			</header>
 			<main>

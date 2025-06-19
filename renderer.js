@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const calendarGrid = document.getElementById('calendarGrid');
     const currentMonthYearEl = document.getElementById('currentMonthYear');
+    const monthYearPicker = document.getElementById('monthYearPicker');
     const prevMonthBtn = document.getElementById('prevMonth');
     const nextMonthBtn = document.getElementById('nextMonth');
 
@@ -29,6 +30,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (allGoals.length === 0) { // Load all goals once
             allGoals = await window.electronAPI.getGoals();
         }
+
+        // Format the current date for the month year picker in YYYY-MM format
+        const yearMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}`;
+        monthYearPicker.value = yearMonth;
+
         currentMonthYearEl.textContent = `${currentDate.toLocaleString('default', { month: 'long' })} ${currentDate.getFullYear()}`;
         renderCalendar(currentDate.getFullYear(), currentDate.getMonth());
     }
@@ -231,6 +237,20 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     syncWithGoogleBtn.addEventListener('click', async () => {
         await window.electronAPI.googleAuth();
+    });
+
+    monthYearPicker.addEventListener('change', (e) => {
+        const [year, month] = e.target.value.split('-').map(num => parseInt(num, 10));
+        // Ensure the date is within valid range (2025-2030)
+        if (year >= 2025 && year <= 2030) {
+            currentDate = new Date(year, month - 1, 1); // Month is 0-indexed in JavaScript
+            loadAndRenderCalendar();
+        } else {
+            alert('Please select a date between 2025 and 2030');
+            // Reset to current value if outside range
+            const yearMonth = `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, '0')}`;
+            monthYearPicker.value = yearMonth;
+        }
     });
 
     // Initial load
