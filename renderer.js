@@ -9,10 +9,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const modal = document.getElementById('dayDetailModal');
     const closeModalBtn = document.querySelector('.close-button');
     const modalDateEl = document.getElementById('modalDate');
-    const modalTitleInput = document.getElementById('modalTitleInput');
-    const modalDetailsInput = document.getElementById('modalDetailsInput');
-    const modalWeekInfoEl = document.getElementById('modalWeekInfo');
-    const reminderToggle = document.getElementById('reminderToggle');
+    const modalTitleInput = document.getElementById('modalTitleInput'); const modalDetailsInput = document.getElementById('modalDetailsInput');
+    const modalWeekInfoEl = document.getElementById('modalWeekInfo'); const reminderToggle = document.getElementById('reminderToggle');
     const reminderTimeInput = document.getElementById('reminderTime');
     const saveReminderBtn = document.getElementById('saveReminder');
     const goalTypeInput = document.getElementById('goalTypeInput');
@@ -233,9 +231,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             currentDate.setMonth(currentDate.getMonth() + 1);
             loadAndRenderCalendar();
         }
-    });
-
-    syncWithGoogleBtn.addEventListener('click', async () => {
+    }); syncWithGoogleBtn.addEventListener('click', async () => {
         await window.electronAPI.googleAuth();
     });
 
@@ -295,10 +291,38 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
-    // Load saved theme and color on startup
+    // Load saved theme and color on startup    // Load saved theme and color on startup
     const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
     const savedColor = localStorage.getItem('color') || 'default';
 
     applyTheme(savedTheme);
     applyColor(savedColor);
+
+    // Handle in-app notifications from main process
+    window.electronAPI.onReminderTriggered((data) => {
+        // Create an in-app notification UI element
+        const notification = document.createElement('div');
+        notification.classList.add('in-app-notification');
+        notification.innerHTML = `
+            <div class="notification-header">
+                <h3>${data.title}</h3>
+                <span class="notification-close">&times;</span>
+            </div>
+            <p>${data.details.substring(0, 100)}${data.details.length > 100 ? '...' : ''}</p>
+            <small>${new Date(data.date).toLocaleDateString()}</small>
+        `;
+
+        document.body.appendChild(notification);
+
+        // Auto-remove after 5 seconds
+        setTimeout(() => {
+            notification.classList.add('fade-out');
+            setTimeout(() => notification.remove(), 500);
+        }, 5000);
+
+        // Allow user to dismiss
+        notification.querySelector('.notification-close').addEventListener('click', () => {
+            notification.remove();
+        });
+    });
 });

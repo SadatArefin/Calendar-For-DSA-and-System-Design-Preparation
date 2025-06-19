@@ -643,3 +643,73 @@ header h1 {
 input:checked + .switcher-slider {
     background-color: var(--theme-primary-color);
 }
+
+/* === In-App Notification Styles === */
+.in-app-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--calendar-active-day-bg, #4285f4);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    max-width: 320px;
+    animation: slide-in 0.3s ease-out forwards;
+    transition: opacity 0.5s;
+}
+
+.in-app-notification.fade-out {
+    opacity: 0;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.notification-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.notification-close {
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.in-app-notification p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.in-app-notification small {
+    display: block;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Dark theme support for notifications */
+body.dark-theme .in-app-notification {
+    background-color: var(--calendar-active-day-bg, #1a73e8);
+    color: #f0f2f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* === Test Notification Button Styles === */

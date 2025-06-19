@@ -168,15 +168,41 @@ function scheduleDailyReminders() {
                 // Clear existing job if any for this goal (e.g., if time was changed)
                 if (scheduledReminders[goal.date]) {
                     scheduledReminders[goal.date].cancel();
-                }
-
-                console.log(`Scheduling reminder for: ${goal.title} on ${goal.date} at ${goal.reminder_time}`);
+                } console.log(`Scheduling reminder for: ${goal.title} on ${goal.date} at ${goal.reminder_time}`);
                 scheduledReminders[goal.date] = schedule.scheduleJob(reminderDateTime, () => {
                     console.log(`Executing reminder for ${goal.title}`);
-                    new Notification({
+
+                    // Enhanced notification with icon and additional properties
+                    const notification = new Notification({
                         title: `Reminder: ${goal.title}`,
-                        body: goal.details.substring(0, 100) + '...' // Show a snippet
-                    }).show();
+                        body: goal.details.substring(0, 100) + (goal.details.length > 100 ? '...' : ''),
+                        icon: path.join(__dirname, 'assets/icon.png'),
+                        silent: false, // Enable sound
+                        urgency: 'critical', // Higher priority (Linux)
+                        timeoutType: 'never' // Don't auto-dismiss on some platforms
+                    });
+
+                    // Handle notification click
+                    notification.on('click', () => {
+                        // Bring window to front when notification is clicked
+                        if (mainWindow) {
+                            if (mainWindow.isMinimized()) mainWindow.restore();
+                            mainWindow.show();
+                            mainWindow.focus();
+                        }
+                    });
+
+                    // Show the notification
+                    notification.show();
+
+                    // If window is focused, also send a message to the renderer
+                    if (mainWindow && mainWindow.isFocused()) {
+                        mainWindow.webContents.send('reminder-triggered', {
+                            title: goal.title,
+                            details: goal.details,
+                            date: goal.date
+                        });
+                    }
                 });
             }
         } else {
