@@ -14,12 +14,12 @@ A beautiful cross-platform desktop calendar app for tracking your DSA (Data Stru
 - **Cross-Platform**: Runs on Windows, macOS, and Linux.
 - **Modern, Responsive UI**: Clean, desktop-friendly design with smooth navigation.
 - **Offline-First**: No internet required after installation.
+- **Google Calendar Sync**: Sync your goals with your primary Google Calendar.
 
 ---
 
 ## Planned & Possible Future Additions
 
-- **Sync with Google Calendar or Outlook**
 - **Export/Import Goals** (CSV, JSON)
 - **Theme Customization** (Dark mode, color themes)
 - **Progress Tracking & Analytics**
@@ -54,6 +54,48 @@ npm start
 ```
 
 The app will launch in a desktop window.
+
+---
+
+### Setting Up Google Calendar Sync (Optional)
+
+To enable syncing with Google Calendar, you need to set up Google API credentials.
+
+1.  **Create a Google Cloud Project**:
+    *   Go to the [Google Cloud Console](https://console.cloud.google.com/) and create a new project.
+
+2.  **Enable the Google Calendar API**:
+    *   In your new project, go to "APIs & Services" > "Enabled APIs & services".
+    *   Click "+ ENABLE APIS AND SERVICES" and search for "Google Calendar API".
+    *   Click "Enable".
+
+3.  **Configure OAuth Consent Screen**:
+    *   Go to "APIs & Services" > "OAuth consent screen".
+    *   Choose **External** and click "Create".
+    *   Fill in the required app information (app name, user support email, developer contact).
+    *   On the "Scopes" page, you don't need to add any scopes.
+    *   On the "Test users" page, click "+ ADD USERS" and add the Google account(s) you will use to test the application. **This is important, otherwise you will get an "access_denied" error.**
+
+4.  **Create Credentials**:
+    *   Go to "APIs & Services" > "Credentials".
+    *   Click "+ CREATE CREDENTIALS" and select "OAuth client ID".
+    *   For "Application type", choose **Web application**.
+    *   Give it a name (e.g., "Goal Calendar App Client").
+    *   Under "Authorized redirect URIs", add `http://localhost:8000`.
+    *   Click "CREATE".
+
+5.  **Download Credentials File**:
+    *   After creating the client ID, a dialog will show your credentials. Click **"DOWNLOAD JSON"**.
+    *   Rename the downloaded file to `credentials.json`.
+    *   Place this `credentials.json` file in the root directory of the project.
+
+6.  **Run the App and Sync**:
+    *   Start the app with `npm start`.
+    *   Click the "Sync with Google" button.
+    *   A Google sign-in window will appear. Log in with one of the test user accounts you added.
+    *   Grant the app permission to access your calendar.
+
+Your goals will now be synced to your primary Google Calendar.
 
 ---
 
@@ -92,6 +134,8 @@ npm run package
 - `renderer.js` — Frontend logic for calendar UI and modals.
 - `preload.js` — Secure bridge between renderer and main process.
 - `goals.json` — Local storage for all goals and reminders.
+- `credentials.json` — (Optional) Google API credentials for calendar sync.
+- `token.json` — (Generated) Stores the Google API access token after successful authorization.
 - `index.html` — Main UI layout.
 - `style.css` — Modern, responsive styles.
 - `assets/` — App icons.
@@ -120,6 +164,7 @@ Sadat Arefin Rafat
 - [Electron](https://www.electronjs.org/)
 - [node-schedule](https://www.npmjs.com/package/node-schedule)
 - [electron-builder](https://www.electron.build/)
+- [googleapis](https://www.npmjs.com/package/googleapis)
 
 ---
 
