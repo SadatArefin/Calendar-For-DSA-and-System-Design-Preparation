@@ -17,6 +17,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const goalTypeInput = document.getElementById('goalTypeInput');
     const syncWithGoogleBtn = document.getElementById('syncWithGoogle');
 
+    // Theme switcher elements
+    const themeSwitcher = document.getElementById('theme-switcher');
+    const colorPalette = document.querySelector('.color-palette');
+
     let currentDate = new Date(2025, 5, 1); // Start in June 2025
     let allGoals = [];
     let currentGoalForModal = null; // To store the goal currently in modal
@@ -231,4 +235,50 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Initial load
     loadAndRenderCalendar();
+
+    // --- Theme Customization Logic ---
+
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeSwitcher.checked = true;
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeSwitcher.checked = false;
+        }
+    }
+
+    function applyColor(color) {
+        document.body.setAttribute('data-theme-color', color);
+
+        // Update active color box
+        document.querySelectorAll('.color-box').forEach(box => {
+            if (box.dataset.color === color) {
+                box.classList.add('active');
+            } else {
+                box.classList.remove('active');
+            }
+        });
+    }
+
+    themeSwitcher.addEventListener('change', () => {
+        const theme = themeSwitcher.checked ? 'dark' : 'light';
+        applyTheme(theme);
+        localStorage.setItem('theme', theme);
+    });
+
+    colorPalette.addEventListener('click', (e) => {
+        if (e.target.classList.contains('color-box')) {
+            const color = e.target.dataset.color;
+            applyColor(color);
+            localStorage.setItem('color', color);
+        }
+    });
+
+    // Load saved theme and color on startup
+    const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark
+    const savedColor = localStorage.getItem('color') || 'default';
+
+    applyTheme(savedTheme);
+    applyColor(savedColor);
 });

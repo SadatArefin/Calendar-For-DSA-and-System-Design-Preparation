@@ -10,6 +10,7 @@ A beautiful cross-platform desktop calendar app for tracking your DSA (Data Stru
 - **Goal Details Modal**: Click any day to view, edit, or add custom goals and notes.
 - **Reminders & Notifications**: Set daily reminders for each goal. Get native desktop notifications at your chosen time.
 - **Custom Goal Support**: Add your own custom reminders and notes for any date.
+- **Theme Customization**: Switch between dark and light modes, with 7 beautiful color themes to choose from.
 - **Persistent Storage**: All goals and reminders are saved locally in `goals.json`.
 - **Cross-Platform**: Runs on Windows, macOS, and Linux.
 - **Modern, Responsive UI**: Clean, desktop-friendly design with smooth navigation.
@@ -21,7 +22,6 @@ A beautiful cross-platform desktop calendar app for tracking your DSA (Data Stru
 ## Planned & Possible Future Additions
 
 - **Export/Import Goals** (CSV, JSON)
-- **Theme Customization** (Dark mode, color themes)
 - **Progress Tracking & Analytics**
 - **Recurring Reminders** (e.g., every Monday)
 - **Mobile Companion App**
@@ -54,6 +54,23 @@ npm start
 ```
 
 The app will launch in a desktop window.
+
+### Customizing Themes
+
+The application supports both dark and light modes, along with 7 different color themes:
+
+1. Default (Blue)
+2. Red
+3. Green
+4. Purple
+5. Orange
+6. Teal
+7. Pink
+
+To change themes:
+- Use the toggle switch in the header to switch between dark and light modes
+- Click on any color circle to change the primary color theme
+- Your theme preferences are automatically saved between sessions
 
 ---
 
@@ -137,7 +154,7 @@ npm run package
 - `credentials.json` — (Optional) Google API credentials for calendar sync.
 - `token.json` — (Generated) Stores the Google API access token after successful authorization.
 - `index.html` — Main UI layout.
-- `style.css` — Modern, responsive styles.
+- `style.css` — Modern, responsive styles with theme customization support.
 - `assets/` — App icons.
 
 ---
