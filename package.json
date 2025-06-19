@@ -1,6 +1,6 @@
 {
     "name": "goal-calendar-app",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Desktop calendar for DSA & System Design goals",
     "main": "main.js",
     "scripts": {
@@ -8,8 +8,8 @@
         "package": "electron-builder"
     },
     "keywords": [],
-    "author": "Your Name",
-    "license": "ISC",
+    "author": "Sadat Arefin Rafat",
+    "license": "MIT",
     "devDependencies": {
         "electron": "^36.5.0",
         "electron-builder": "^26.0.12"
@@ -18,6 +18,13 @@
         "node-schedule": "^2.1.1"
     },
     "build": {
-        "icon": "assets/icon"
+        "icon": "assets/icon",
+        "publish": [
+            {
+                "provider": "github",
+                "owner": "sadatArefin",
+                "repo": "Calendar-For-DSA-and-System-Design-Preparation"
+            }
+        ]
     }
 }
