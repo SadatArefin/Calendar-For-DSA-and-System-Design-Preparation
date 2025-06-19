@@ -1,0 +1,940 @@
+[
+  {
+    "date": "2025-06-25",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Sliding Window, Two Pointers, Prefix Sum",
+    "details": "Real-world: Analytics dashboard, string parsing, log window tracking. Optimization: Brute force → optimal via observation. Hack: Visualize pointer movements or state transitions.",
+    "weekInfo": {
+      "number": 1,
+      "theme": "Foundations Rebooted",
+      "dateRange": "June 25–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-06-26",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: Sliding Window, Two Pointers, Prefix Sum",
+    "details": "Real-world: Analytics dashboard, string parsing, log window tracking. Optimization: Brute force → optimal via observation. Hack: Visualize pointer movements or state transitions.",
+    "weekInfo": {
+      "number": 1,
+      "theme": "Foundations Rebooted",
+      "dateRange": "June 25–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-06-27",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: Sliding Window, Two Pointers, Prefix Sum",
+    "details": "Real-world: Analytics dashboard, string parsing, log window tracking. Optimization: Brute force → optimal via observation. Hack: Visualize pointer movements or state transitions.",
+    "weekInfo": {
+      "number": 1,
+      "theme": "Foundations Rebooted",
+      "dateRange": "June 25–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-06-28",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Monolith vs Microservices",
+    "details": "Deep dive into Monolith vs Microservices. Weekend focus.",
+    "weekInfo": {
+      "number": 1,
+      "theme": "Foundations Rebooted",
+      "dateRange": "June 25–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-06-29",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Monolith vs Microservices",
+    "details": "Deep dive into Monolith vs Microservices. Weekend focus.",
+    "weekInfo": {
+      "number": 1,
+      "theme": "Foundations Rebooted",
+      "dateRange": "June 25–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-06-30",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: Sliding Window, Two Pointers, Prefix Sum",
+    "details": "Real-world: Analytics dashboard, string parsing, log window tracking. Optimization: Brute force → optimal via observation. Hack: Visualize pointer movements or state transitions.",
+    "weekInfo": {
+      "number": 1,
+      "theme": "Foundations Rebooted",
+      "dateRange": "June 25–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-01",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Sliding Window, Two Pointers, Prefix Sum",
+    "details": "Real-world: Analytics dashboard, string parsing, log window tracking. Optimization: Brute force → optimal via observation. Hack: Visualize pointer movements or state transitions.",
+    "weekInfo": {
+      "number": 1,
+      "theme": "Foundations Rebooted",
+      "dateRange": "June 25–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-02",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Search Variants, Backtracking intro",
+    "details": "Real-world: Pagination, User permissions, Route finding. Optimization: Reducing search space. Hack: Use condition functions inside binary search.",
+    "weekInfo": {
+      "number": 2,
+      "theme": "Search and Solve",
+      "dateRange": "July 1–7"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-03",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Search Variants, Backtracking intro",
+    "details": "Real-world: Pagination, User permissions, Route finding. Optimization: Reducing search space. Hack: Use condition functions inside binary search.",
+    "weekInfo": {
+      "number": 2,
+      "theme": "Search and Solve",
+      "dateRange": "July 1–7"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-04",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Search Variants, Backtracking intro",
+    "details": "Real-world: Pagination, User permissions, Route finding. Optimization: Reducing search space. Hack: Use condition functions inside binary search.",
+    "weekInfo": {
+      "number": 2,
+      "theme": "Search and Solve",
+      "dateRange": "July 1–7"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-05",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: REST vs GraphQL, Rate Limiting",
+    "details": "Explore REST vs GraphQL, and techniques for rate limiting. Weekend focus.",
+    "weekInfo": {
+      "number": 2,
+      "theme": "Search and Solve",
+      "dateRange": "July 1–7"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-06",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: REST vs GraphQL, Rate Limiting",
+    "details": "Explore REST vs GraphQL, and techniques for rate limiting. Weekend focus.",
+    "weekInfo": {
+      "number": 2,
+      "theme": "Search and Solve",
+      "dateRange": "July 1–7"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-07",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Search Variants, Backtracking intro",
+    "details": "Real-world: Pagination, User permissions, Route finding. Optimization: Reducing search space. Hack: Use condition functions inside binary search.",
+    "weekInfo": {
+      "number": 2,
+      "theme": "Search and Solve",
+      "dateRange": "July 1–7"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-08",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Search Variants, Backtracking intro",
+    "details": "Real-world: Pagination, User permissions, Route finding. Optimization: Reducing search space. Hack: Use condition functions inside binary search.",
+    "weekInfo": {
+      "number": 2,
+      "theme": "Search and Solve",
+      "dateRange": "July 1–7"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-09",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Hash Maps, Sets, Frequency Maps, Memoization",
+    "details": "Real-world: Caching APIs, tracking frequent users, auto suggestions. Hack: Frequency buckets, handling collisions, use keys smartly.",
+    "weekInfo": {
+      "number": 3,
+      "theme": "Use the Map",
+      "dateRange": "July 8–14"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-10",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: Hash Maps, Sets, Frequency Maps, Memoization",
+    "details": "Real-world: Caching APIs, tracking frequent users, auto suggestions. Hack: Frequency buckets, handling collisions, use keys smartly.",
+    "weekInfo": {
+      "number": 3,
+      "theme": "Use the Map",
+      "dateRange": "July 8–14"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-11",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: Hash Maps, Sets, Frequency Maps, Memoization",
+    "details": "Real-world: Caching APIs, tracking frequent users, auto suggestions. Hack: Frequency buckets, handling collisions, use keys smartly.",
+    "weekInfo": {
+      "number": 3,
+      "theme": "Use the Map",
+      "dateRange": "July 8–14"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-12",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Caching layers (Redis, CDN), Consistency models",
+    "details": "Understand caching strategies and consistency tradeoffs. Weekend focus.",
+    "weekInfo": {
+      "number": 3,
+      "theme": "Use the Map",
+      "dateRange": "July 8–14"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-13",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Caching layers (Redis, CDN), Consistency models",
+    "details": "Understand caching strategies and consistency tradeoffs. Weekend focus.",
+    "weekInfo": {
+      "number": 3,
+      "theme": "Use the Map",
+      "dateRange": "July 8–14"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-14",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: Hash Maps, Sets, Frequency Maps, Memoization",
+    "details": "Real-world: Caching APIs, tracking frequent users, auto suggestions. Hack: Frequency buckets, handling collisions, use keys smartly.",
+    "weekInfo": {
+      "number": 3,
+      "theme": "Use the Map",
+      "dateRange": "July 8–14"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-15",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Hash Maps, Sets, Frequency Maps, Memoization",
+    "details": "Real-world: Caching APIs, tracking frequent users, auto suggestions. Hack: Frequency buckets, handling collisions, use keys smartly.",
+    "weekInfo": {
+      "number": 3,
+      "theme": "Use the Map",
+      "dateRange": "July 8–14"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-16",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Recursion, Backtracking, DFS on trees",
+    "details": "Real-world: Permission tree traversal, version control branching. Hack: Model decision trees explicitly before code.",
+    "weekInfo": {
+      "number": 4,
+      "theme": "Recursion and Decisions",
+      "dateRange": "July 15–21"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-17",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: Recursion, Backtracking, DFS on trees",
+    "details": "Real-world: Permission tree traversal, version control branching. Hack: Model decision trees explicitly before code.",
+    "weekInfo": {
+      "number": 4,
+      "theme": "Recursion and Decisions",
+      "dateRange": "July 15–21"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-18",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: Recursion, Backtracking, DFS on trees",
+    "details": "Real-world: Permission tree traversal, version control branching. Hack: Model decision trees explicitly before code.",
+    "weekInfo": {
+      "number": 4,
+      "theme": "Recursion and Decisions",
+      "dateRange": "July 15–21"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-19",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Call stacks, tail recursion optimization, Lambdas vs APIs",
+    "details": "Deep dive into recursion in system behavior and Lambda APIs. Weekend focus.",
+    "weekInfo": {
+      "number": 4,
+      "theme": "Recursion and Decisions",
+      "dateRange": "July 15–21"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-20",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Call stacks, tail recursion optimization, Lambdas vs APIs",
+    "details": "Deep dive into recursion in system behavior and Lambda APIs. Weekend focus.",
+    "weekInfo": {
+      "number": 4,
+      "theme": "Recursion and Decisions",
+      "dateRange": "July 15–21"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-21",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: Recursion, Backtracking, DFS on trees",
+    "details": "Real-world: Permission tree traversal, version control branching. Hack: Model decision trees explicitly before code.",
+    "weekInfo": {
+      "number": 4,
+      "theme": "Recursion and Decisions",
+      "dateRange": "July 15–21"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-22",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Recursion, Backtracking, DFS on trees",
+    "details": "Real-world: Permission tree traversal, version control branching. Hack: Model decision trees explicitly before code.",
+    "weekInfo": {
+      "number": 4,
+      "theme": "Recursion and Decisions",
+      "dateRange": "July 15–21"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-23",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: 1D DP, Fibonacci variants, Memoized recursion",
+    "details": "Real-world: Caching, pricing plans, optimal split points. Hack: State definition matters more than code.",
+    "weekInfo": {
+      "number": 5,
+      "theme": "Dynamic Programming I",
+      "dateRange": "July 22–28"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-24",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: 1D DP, Fibonacci variants, Memoized recursion",
+    "details": "Real-world: Caching, pricing plans, optimal split points. Hack: State definition matters more than code.",
+    "weekInfo": {
+      "number": 5,
+      "theme": "Dynamic Programming I",
+      "dateRange": "July 22–28"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-25",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: 1D DP, Fibonacci variants, Memoized recursion",
+    "details": "Real-world: Caching, pricing plans, optimal split points. Hack: State definition matters more than code.",
+    "weekInfo": {
+      "number": 5,
+      "theme": "Dynamic Programming I",
+      "dateRange": "July 22–28"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-26",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Retry policies, failure recovery",
+    "details": "Explore fault tolerance through retry patterns. Weekend focus.",
+    "weekInfo": {
+      "number": 5,
+      "theme": "Dynamic Programming I",
+      "dateRange": "July 22–28"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-27",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Retry policies, failure recovery",
+    "details": "Explore fault tolerance through retry patterns. Weekend focus.",
+    "weekInfo": {
+      "number": 5,
+      "theme": "Dynamic Programming I",
+      "dateRange": "July 22–28"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-07-28",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: 1D DP, Fibonacci variants, Memoized recursion",
+    "details": "Real-world: Caching, pricing plans, optimal split points. Hack: State definition matters more than code.",
+    "weekInfo": {
+      "number": 5,
+      "theme": "Dynamic Programming I",
+      "dateRange": "July 22–28"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-29",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: 1D DP, Fibonacci variants, Memoized recursion",
+    "details": "Real-world: Caching, pricing plans, optimal split points. Hack: State definition matters more than code.",
+    "weekInfo": {
+      "number": 5,
+      "theme": "Dynamic Programming I",
+      "dateRange": "July 22–28"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-30",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Greedy decisions, Interval problems, Sweep lines",
+    "details": "Real-world: Meeting schedulers, auctions, job queues. Hack: Sort + greedy is a common duo.",
+    "weekInfo": {
+      "number": 6,
+      "theme": "Greedy & Intervals",
+      "dateRange": "July 29–August 4"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-07-31",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: Greedy decisions, Interval problems, Sweep lines",
+    "details": "Real-world: Meeting schedulers, auctions, job queues. Hack: Sort + greedy is a common duo.",
+    "weekInfo": {
+      "number": 6,
+      "theme": "Greedy & Intervals",
+      "dateRange": "July 29–August 4"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-01",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: Greedy decisions, Interval problems, Sweep lines",
+    "details": "Real-world: Meeting schedulers, auctions, job queues. Hack: Sort + greedy is a common duo.",
+    "weekInfo": {
+      "number": 6,
+      "theme": "Greedy & Intervals",
+      "dateRange": "July 29–August 4"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-02",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Load balancing, failover, real-time scheduling",
+    "details": "Handle real-time systems with greedy-like load solutions. Weekend focus.",
+    "weekInfo": {
+      "number": 6,
+      "theme": "Greedy & Intervals",
+      "dateRange": "July 29–August 4"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-03",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Load balancing, failover, real-time scheduling",
+    "details": "Handle real-time systems with greedy-like load solutions. Weekend focus.",
+    "weekInfo": {
+      "number": 6,
+      "theme": "Greedy & Intervals",
+      "dateRange": "July 29–August 4"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-04",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: Greedy decisions, Interval problems, Sweep lines",
+    "details": "Real-world: Meeting schedulers, auctions, job queues. Hack: Sort + greedy is a common duo.",
+    "weekInfo": {
+      "number": 6,
+      "theme": "Greedy & Intervals",
+      "dateRange": "July 29–August 4"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-05",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Greedy decisions, Interval problems, Sweep lines",
+    "details": "Real-world: Meeting schedulers, auctions, job queues. Hack: Sort + greedy is a common duo.",
+    "weekInfo": {
+      "number": 6,
+      "theme": "Greedy & Intervals",
+      "dateRange": "July 29–August 4"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-06",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: BFS, DFS, Topological Sort, Union Find",
+    "details": "Real-world: Git branching, dependency resolution, map-based data. Hack: Track visited states carefully, not just nodes.",
+    "weekInfo": {
+      "number": 7,
+      "theme": "Graphs and BFS/DFS",
+      "dateRange": "August 5–11"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-07",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: BFS, DFS, Topological Sort, Union Find",
+    "details": "Real-world: Git branching, dependency resolution, map-based data. Hack: Track visited states carefully, not just nodes.",
+    "weekInfo": {
+      "number": 7,
+      "theme": "Graphs and BFS/DFS",
+      "dateRange": "August 5–11"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-08",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: BFS, DFS, Topological Sort, Union Find",
+    "details": "Real-world: Git branching, dependency resolution, map-based data. Hack: Track visited states carefully, not just nodes.",
+    "weekInfo": {
+      "number": 7,
+      "theme": "Graphs and BFS/DFS",
+      "dateRange": "August 5–11"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-09",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Service discovery, dependency injection",
+    "details": "Explore how graph logic maps to service connections. Weekend focus.",
+    "weekInfo": {
+      "number": 7,
+      "theme": "Graphs and BFS/DFS",
+      "dateRange": "August 5–11"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-10",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Service discovery, dependency injection",
+    "details": "Explore how graph logic maps to service connections. Weekend focus.",
+    "weekInfo": {
+      "number": 7,
+      "theme": "Graphs and BFS/DFS",
+      "dateRange": "August 5–11"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-11",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: BFS, DFS, Topological Sort, Union Find",
+    "details": "Real-world: Git branching, dependency resolution, map-based data. Hack: Track visited states carefully, not just nodes.",
+    "weekInfo": {
+      "number": 7,
+      "theme": "Graphs and BFS/DFS",
+      "dateRange": "August 5–11"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-12",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: BFS, DFS, Topological Sort, Union Find",
+    "details": "Real-world: Git branching, dependency resolution, map-based data. Hack: Track visited states carefully, not just nodes.",
+    "weekInfo": {
+      "number": 7,
+      "theme": "Graphs and BFS/DFS",
+      "dateRange": "August 5–11"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-13",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Trees, Heap/Priority Queue, Segment Trees (intro)",
+    "details": "Real-world: Task queues, message brokers, taxonomies. Hack: Postorder for cleanup, MinHeap for scheduling.",
+    "weekInfo": {
+      "number": 8,
+      "theme": "Trees & Heaps",
+      "dateRange": "August 12–18"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-14",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Trees, Heap/Priority Queue, Segment Trees (intro)",
+    "details": "Real-world: Task queues, message brokers, taxonomies. Hack: Postorder for cleanup, MinHeap for scheduling.",
+    "weekInfo": {
+      "number": 8,
+      "theme": "Trees & Heaps",
+      "dateRange": "August 12–18"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-15",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Trees, Heap/Priority Queue, Segment Trees (intro)",
+    "details": "Real-world: Task queues, message brokers, taxonomies. Hack: Postorder for cleanup, MinHeap for scheduling.",
+    "weekInfo": {
+      "number": 8,
+      "theme": "Trees & Heaps",
+      "dateRange": "August 12–18"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-16",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Pub/Sub, event-driven systems",
+    "details": "Understand message queuing in real-time apps. Weekend focus.",
+    "weekInfo": {
+      "number": 8,
+      "theme": "Trees & Heaps",
+      "dateRange": "August 12–18"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-17",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Pub/Sub, event-driven systems",
+    "details": "Understand message queuing in real-time apps. Weekend focus.",
+    "weekInfo": {
+      "number": 8,
+      "theme": "Trees & Heaps",
+      "dateRange": "August 12–18"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-18",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Trees, Heap/Priority Queue, Segment Trees (intro)",
+    "details": "Real-world: Task queues, message brokers, taxonomies. Hack: Postorder for cleanup, MinHeap for scheduling.",
+    "weekInfo": {
+      "number": 8,
+      "theme": "Trees & Heaps",
+      "dateRange": "August 12–18"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-19",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Binary Trees, Heap/Priority Queue, Segment Trees (intro)",
+    "details": "Real-world: Task queues, message brokers, taxonomies. Hack: Postorder for cleanup, MinHeap for scheduling.",
+    "weekInfo": {
+      "number": 8,
+      "theme": "Trees & Heaps",
+      "dateRange": "August 12–18"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-20",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: 2D DP, Knapsack, Subset Sum, Matrix path",
+    "details": "Real-world: Shipping logistics, pricing rules. Hack: Reuse state across dimensions.",
+    "weekInfo": {
+      "number": 9,
+      "theme": "Dynamic Programming II",
+      "dateRange": "August 19–25"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-21",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: 2D DP, Knapsack, Subset Sum, Matrix path",
+    "details": "Real-world: Shipping logistics, pricing rules. Hack: Reuse state across dimensions.",
+    "weekInfo": {
+      "number": 9,
+      "theme": "Dynamic Programming II",
+      "dateRange": "August 19–25"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-22",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: 2D DP, Knapsack, Subset Sum, Matrix path",
+    "details": "Real-world: Shipping logistics, pricing rules. Hack: Reuse state across dimensions.",
+    "weekInfo": {
+      "number": 9,
+      "theme": "Dynamic Programming II",
+      "dateRange": "August 19–25"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-23",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Sharding, partitioning, load-aware systems",
+    "details": "Optimize DB and workload split. Weekend focus.",
+    "weekInfo": {
+      "number": 9,
+      "theme": "Dynamic Programming II",
+      "dateRange": "August 19–25"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-24",
+    "dayOfWeek": "Sunday",
+    "type": "weekend_system_design",
+    "title": "System Design: Sharding, partitioning, load-aware systems",
+    "details": "Optimize DB and workload split. Weekend focus.",
+    "weekInfo": {
+      "number": 9,
+      "theme": "Dynamic Programming II",
+      "dateRange": "August 19–25"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  },
+  {
+    "date": "2025-08-25",
+    "dayOfWeek": "Monday",
+    "type": "weekday_dsa",
+    "title": "DSA: 2D DP, Knapsack, Subset Sum, Matrix path",
+    "details": "Real-world: Shipping logistics, pricing rules. Hack: Reuse state across dimensions.",
+    "weekInfo": {
+      "number": 9,
+      "theme": "Dynamic Programming II",
+      "dateRange": "August 19–25"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-26",
+    "dayOfWeek": "Tuesday",
+    "type": "weekday_dsa",
+    "title": "DSA: 2D DP, Knapsack, Subset Sum, Matrix path",
+    "details": "Real-world: Shipping logistics, pricing rules. Hack: Reuse state across dimensions.",
+    "weekInfo": {
+      "number": 9,
+      "theme": "Dynamic Programming II",
+      "dateRange": "August 19–25"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-27",
+    "dayOfWeek": "Wednesday",
+    "type": "weekday_dsa",
+    "title": "DSA: Mixed Patterns & Mock Interviews",
+    "details": "Real-world: Logging system, SaaS pricing optimizer, A/B test evaluator. Hack: Combine patterns confidently.",
+    "weekInfo": {
+      "number": 10,
+      "theme": "Wrap Up + Mock Week",
+      "dateRange": "August 26–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-28",
+    "dayOfWeek": "Thursday",
+    "type": "weekday_dsa",
+    "title": "DSA: Mixed Patterns & Mock Interviews",
+    "details": "Real-world: Logging system, SaaS pricing optimizer, A/B test evaluator. Hack: Combine patterns confidently.",
+    "weekInfo": {
+      "number": 10,
+      "theme": "Wrap Up + Mock Week",
+      "dateRange": "August 26–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-29",
+    "dayOfWeek": "Friday",
+    "type": "weekday_dsa",
+    "title": "DSA: Mixed Patterns & Mock Interviews",
+    "details": "Real-world: Logging system, SaaS pricing optimizer, A/B test evaluator. Hack: Combine patterns confidently.",
+    "weekInfo": {
+      "number": 10,
+      "theme": "Wrap Up + Mock Week",
+      "dateRange": "August 26–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "09:00"
+  },
+  {
+    "date": "2025-08-30",
+    "dayOfWeek": "Saturday",
+    "type": "weekend_system_design",
+    "title": "System Design: Design Instagram/Slack/URL Shortener (pick one)",
+    "details": "Design real-life systems combining all previous concepts. Weekend focus.",
+    "weekInfo": {
+      "number": 10,
+      "theme": "Wrap Up + Mock Week",
+      "dateRange": "August 26–30"
+    },
+    "reminder_set": false,
+    "reminder_time": "10:00"
+  }
+]

@@ -1,0 +1,319 @@
+/* === Global Resets & Body === */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    background-color: #f0f2f5; /* Softer background for the page */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px; /* Add some padding for smaller screens */
+    box-sizing: border-box;
+    max-height: 100vh;
+}
+
+/* === Main Application Container === */
+.app-container {
+    background-color: #ffffff;
+    padding: 18px 10px; /* Reduced padding for less vertical space */
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    max-width: 1600px; /* Increased max width for desktop screens */
+}
+
+/* === Header: Title and Navigation === */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+    color: #1a73e8; /* A vibrant blue */
+    font-size: 2.5em; /* Fixed larger size for desktop */
+    margin-bottom: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.navigation #currentMonthYear {
+    font-size: 1.8em; /* Fixed larger size for desktop */
+    font-weight: 500;
+    color: #3c4043;
+}
+
+.navigation button {
+    padding: 12px 24px; /* Larger buttons for desktop */
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em; /* Larger font for desktop */
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.navigation button:hover {
+    background-color: #1558b0; /* Darker blue on hover */
+}
+.navigation button:active {
+    transform: translateY(1px);
+}
+
+/* === Calendar Grid System === */
+#calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days */
+    gap: 1px; /* Creates thin lines between cells */
+    border: 1px solid #dcdcdc; /* Outer border for the grid */
+    background-color: #dcdcdc; /* Color for the gaps (grid lines) */
+    border-radius: 8px; /* Rounded corners for the grid container */
+    overflow: hidden; /* Ensures child elements respect border-radius */
+}
+
+.calendar-header {
+    font-weight: 600;
+    text-align: center;
+    padding: 16px 8px; /* Increased padding for desktop */
+    background-color: #f8f9fa; /* Light grey for day headers (Sun, Mon, etc.) */
+    color: #4a4a4a;
+    font-size: 1.1em; /* Larger font for desktop */
+    /* border-bottom: 1px solid #dcdcdc; Handled by grid gap */
+}
+
+.calendar-day {
+    background-color: #ffffff;
+    padding: 6px; /* Reduced padding for compactness */
+    min-height: 90px; /* Reduced height for less scrolling */
+    position: relative; /* For absolute positioning of indicators */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Content starts from the top */
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.calendar-day:hover {
+    background-color: #e9f5ff; /* Light blue tint on hover */
+}
+
+/* Styling for days not in the current month */
+.calendar-day.other-month {
+    background-color: #f7f7f7;
+}
+.calendar-day.other-month .day-number {
+    color: #b0b0b0; /* Grey out day numbers */
+}
+.calendar-day.other-month:hover {
+    background-color: #efefef;
+}
+.calendar-day.other-month .goal-title-preview,
+.calendar-day.other-month .reminder-indicator {
+    visibility: hidden; /* Hide goals and reminders for other month days */
+}
+
+.day-number {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #5f6368; /* Standard day number color */
+    margin-bottom: 6px;
+    text-align: left; /* Day number to the top-left */
+    padding: 2px;
+}
+
+/* Styling for the current day */
+.calendar-day.today {
+    background-color: #e0edff; /* A distinct background for today */
+}
+.calendar-day.today .day-number {
+    background-color: #1a73e8; /* Blue circle for today's number */
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-left: 0; /* Adjust if needed */
+}
+
+/* === Goal Preview within Day Cells === */
+.goal-title-preview {
+    font-size: 0.78em;
+    margin-top: 4px;
+    padding: 5px 7px;
+    border-radius: 4px;
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Multi-line ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+    max-height: calc(0.78em * 1.35 * 3 + 10px); /* font-size * line-height * lines + padding */
+}
+
+.goal-title-preview.weekday_dsa {
+    background-color: #e6f7ff;
+    color: #0d6efd;
+    border-left: 3px solid #0d6efd;
+}
+
+.goal-title-preview.weekend_system_design {
+    background-color: #e6fffa;
+    color: #198754;
+    border-left: 3px solid #198754;
+}
+
+.goal-title-preview.custom { /* For any custom user-defined items */
+    background-color: #fffbe6;
+    color: #ffc107;
+    border-left: 3px solid #ffc107;
+}
+
+/* === Reminder Indicator (e.g., clock icon) === */
+.reminder-indicator {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1em; /* Adjust size as needed */
+    color: #dc3545; /* Red for reminder */
+}
+
+/* === Modal Styles === */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.55); /* Darker overlay */
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 8% auto; /* Adjust top margin for better centering */
+    padding: 25px 30px;
+    border: none;
+    width: 90%;
+    max-width: 600px; /* Slightly narrower modal for readability */
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    position: relative; /* For absolute positioning of close button */
+    animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    color: #757575;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modalDate {
+    font-size: 1.05em;
+    color: #5f6368;
+    margin-bottom: 8px;
+}
+
+#modalTitle {
+    font-size: 1.7em;
+    color: #1a73e8; /* Match header blue */
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+#modalDetails {
+    white-space: pre-wrap; /* Preserve line breaks */
+    max-height: 250px;
+    overflow-y: auto;
+    background-color: #f8f9fa; /* Light background for details block */
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #3c4043;
+    border: 1px solid #e0e0e0;
+}
+
+#modalWeekInfo {
+    font-size: 0.9em;
+    color: #5f6368;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9f5ff; /* Light blue info box */
+    border-radius: 4px;
+    border-left: 3px solid #1a73e8;
+}
+
+/* === Reminder Section in Modal === */
+.reminder-section {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Spacing between elements */
+}
+.reminder-section label {
+    font-weight: 500;
+    color: #3c4043;
+}
+.reminder-section input[type="checkbox"] {
+    margin-right: 2px; /* Reduced margin */
+    transform: scale(1.15); /* Slightly larger checkbox */
+    cursor: pointer;
+}
+.reminder-section input[type="time"] {
+    padding: 7px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+.reminder-section button {
+    padding: 9px 18px;
+    background-color: #28a745; /* Green for save */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+.reminder-section button:hover {
+    background-color: #1e7e34; /* Darker green */
+}
+.reminder-section button:active {
+    transform: translateY(1px);
+}
