@@ -22,8 +22,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build and publish
+      - name: Build and publish portable only
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx electron-builder --publish always
+          if [[ "${{ matrix.os }}" == "windows-latest" ]]; then
+            npx electron-builder --win portable --publish always
+          elif [[ "${{ matrix.os }}" == "ubuntu-latest" ]]; then
+            npx electron-builder --linux AppImage --publish always
+          elif [[ "${{ matrix.os }}" == "macos-latest" ]]; then
+            npx electron-builder --mac zip --publish always
+          fi

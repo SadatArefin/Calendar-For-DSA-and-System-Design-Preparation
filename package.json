@@ -1,6 +1,6 @@
 {
     "name": "goal-calendar-app",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Desktop calendar for DSA & System Design goals",
     "main": "main.js",
     "scripts": {
